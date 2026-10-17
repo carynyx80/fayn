@@ -116,8 +116,8 @@
   },
   {
     "path": "docs/PRELAUNCH.md",
-    "bytes": 1770,
-    "sha256": "4937920960c4d3781f3796b6792ad93f5d165104e677e6eaf685f6deb08eaac7"
+    "bytes": 1876,
+    "sha256": "7dce686151192e72a561dff32e0eff5fbc2dd7d4fd9d180c71e63b0478051c4b"
   },
   {
     "path": "docs/ROBINHOOD-LAUNCH.md",
@@ -170,14 +170,19 @@
     "sha256": "372faf31d775dedc2eba39697b26d2015ff844a14b0450b921946ba0261a6537"
   },
   {
+    "path": "docs/WALLET-FIX.md",
+    "bytes": 1693,
+    "sha256": "384ca51fd3edbfcac3b30b599625158174f85be1b245a68b1bf3ecb15635fa74"
+  },
+  {
     "path": "docs/ZERION.md",
     "bytes": 161,
     "sha256": "73e02712ac2e644b423ae24127e81e86d9b213c4162006f125db109814afd7fb"
   },
   {
     "path": "scripts/build.mjs",
-    "bytes": 1110,
-    "sha256": "9e4848e88eb2b8a1f5c510fd5c78c98feb409c94a6cebfdebc3701da0e52516a"
+    "bytes": 1606,
+    "sha256": "294986aea87fd276b80a915d3db7117e18d900765066c5468a7d5235f7e0fe84"
   },
   {
     "path": "scripts/chain.mjs",
@@ -216,8 +221,8 @@
   },
   {
     "path": "scripts/github-manifest.mjs",
-    "bytes": 1874,
-    "sha256": "a0d666b2f4e57950f6c350aa6c43dd66748c3fb7c141612b8e1e0bcd0fdb704e"
+    "bytes": 1878,
+    "sha256": "0254a67d56401c11f7d2e7e89dee98a9de272f5a24e4d244d5e771f18084176e"
   },
   {
     "path": "scripts/prepare-robinhood.mjs",
@@ -228,6 +233,11 @@
     "path": "scripts/prepare-testnet.mjs",
     "bytes": 2653,
     "sha256": "bd0d401e56afb987fcad9ef9c4d355368ff84e5d6f6d592b2fd93b8bbe4f48a5"
+  },
+  {
+    "path": "scripts/qr-entry.mjs",
+    "bytes": 52,
+    "sha256": "6a4ae9bb0ab04f0ca31b3e7cb735dae79b3ca2a17484e2dfd853a3d32f815366"
   },
   {
     "path": "scripts/sandbox-bundle.mjs",
@@ -251,8 +261,8 @@
   },
   {
     "path": "scripts/wallet-entry.mjs",
-    "bytes": 3129,
-    "sha256": "0aef409b6255b333d0cf0ec5c2d673171232f25dd44a1a35bda64460856a6f34"
+    "bytes": 5514,
+    "sha256": "9f87d96606371221eb02935dca8abcfcaa9d1e8dd3652d324e52d6a04c14306a"
   },
   {
     "path": "services/indexer.mjs",
@@ -376,13 +386,13 @@
   },
   {
     "path": "tests/vercel.test.mjs",
-    "bytes": 1188,
-    "sha256": "d2bbb3271b084af74c22a26e69c730d3a124044ff86477062a71780ca7941a35"
+    "bytes": 1443,
+    "sha256": "5974da717356c1eb3f2d18c4bc258c6181b4c22592b4dc5f800b48ddc21412ab"
   },
   {
     "path": "tests/wallet.test.mjs",
-    "bytes": 2126,
-    "sha256": "61216a9a39569413ba56a6b06009a635d13f113e8236e1b0c491a17e9d97d560"
+    "bytes": 3876,
+    "sha256": "a8906e84c44ee1ece01ada0af3d9491874b757a71b8b5be0da377bacb1d1e60e"
   },
   {
     "path": "web/app.js",
@@ -403,6 +413,11 @@
     "path": "web/client-api.js",
     "bytes": 351,
     "sha256": "8768b3d91308adf783e243cbe207fbcca790d94c2190a88b71e85d3650cd7cb7"
+  },
+  {
+    "path": "web/fayn-logo.png",
+    "bytes": 245088,
+    "sha256": "848b0b20643bda0ef31369d0b35530f4989e9a7ac2cb6020154d27bebe5058f7"
   },
   {
     "path": "web/fonts/BodoniModa-Italic.ttf",
@@ -446,8 +461,8 @@
   },
   {
     "path": "web/index.html",
-    "bytes": 6173,
-    "sha256": "d7bca595bf1013ec98321d4b7948d25f6ba35848335a177a7569cbb888697560"
+    "bytes": 6826,
+    "sha256": "26298029db1b53d1a3c4033501fb5ca686e544ab1f6c4dfe6048858e19963700"
   },
   {
     "path": "web/package.json",
@@ -461,7 +476,7 @@
   },
   {
     "path": "web/style.css",
-    "bytes": 20601,
-    "sha256": "7806e72afe2cc83deedb4f0947d1db42d91290ef00b0a6aff32f59014e562031"
+    "bytes": 21093,
+    "sha256": "3e67e4d4653aadbea7e367e82d1c6a03b13687c3432a74ab7b6130c3aba6a0a0"
   }
 ]
