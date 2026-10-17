@@ -1,0 +1,10 @@
+✔ frontend renders every route and invalidates executable quotes on edits (3086.8103ms)
+✔ HTTP UI assets, origin guard, approvals, executable quotes, swaps, LP and claims (16129.6858ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22735.6884

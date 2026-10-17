@@ -1,0 +1,32 @@
+{
+  "name": "fayn",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "node scripts/compile.mjs",
+    "chain": "node scripts/chain.mjs",
+    "seed": "node scripts/seed.mjs",
+    "start": "node services/server.mjs",
+    "dev": "node scripts/dev.mjs",
+    "test": "node --test --test-concurrency=1 tests/contracts.test.mjs tests/indexer.test.mjs tests/math.test.mjs tests/reentrancy.test.mjs",
+    "test:e2e": "node --test --test-concurrency=1 tests/http.test.mjs tests/frontend.test.mjs",
+    "simulate": "node simulation/run.mjs",
+    "verify": "npm run compile && npm test && npm run simulate",
+    "check:local": "node scripts/check-local.mjs",
+    "build": "node scripts/build.mjs",
+    "test:hosted": "node --test --test-concurrency=1 tests/browser-demo.test.mjs tests/vercel.test.mjs",
+    "check:syntax": "node scripts/check-syntax.mjs"
+  },
+  "dependencies": {
+    "@uniswap/v4-core": "1.0.2",
+    "@openzeppelin/contracts": "5.4.0",
+    "ethers": "6.15.0",
+    "solc": "0.8.26"
+  },
+  "devDependencies": {
+    "hardhat": "2.26.3"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  }
+}

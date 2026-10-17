@@ -1,0 +1,39 @@
+{
+  "time": "2026-10-17T18:27:29.981Z",
+  "checks": [
+    {
+      "name": "service",
+      "ok": true
+    },
+    {
+      "name": "indexLag",
+      "ok": true
+    },
+    {
+      "name": "indexFreshness",
+      "ok": true
+    },
+    {
+      "name": "router residual tUSDC",
+      "ok": true,
+      "amount": "0"
+    },
+    {
+      "name": "vault solvency tUSDC",
+      "ok": true,
+      "balance": "0",
+      "liabilities": "0"
+    },
+    {
+      "name": "router residual tWETH",
+      "ok": true,
+      "amount": "0"
+    },
+    {
+      "name": "vault solvency tWETH",
+      "ok": true,
+      "balance": "0",
+      "liabilities": "0"
+    }
+  ]
+}

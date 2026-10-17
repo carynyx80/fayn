@@ -1,0 +1,21 @@
+✔ fee boundaries, rounding and 200 reproducible fuzz timestamps (17178.9496ms)
+✔ configuration authorization, immutable terms, fee/window and asset bounds (1295.8557ms)
+✔ prestart trading rejects; hook rejects direct callbacks (177.7296ms)
+✔ both directions and exact-input/output preserve balances and native LP fees (4862.4095ms)
+✔ slippage, fee ceilings, deadline, balances and LP ownership fail safely (259.43ms)
+✔ 20 alternating fuzz swaps reconcile wallet/manager token conservation (16787.4663ms)
+✔ liquidity add, collect, partial and full withdrawal preserve ownership (685.0422ms)
+✔ funding conservation, authorization, duplicate claims and epoch/pool/vault replay (992.5122ms)
+✔ persistent checkpoints are idempotent; reorg rolls back and replays canonical events (677.0139ms)
+✔ confirmation cutoff and retry behavior (294.3649ms)
+✔ disk checkpoint survives a process-style reopen without duplicate backfill (241.129ms)
+✔ fee-exclusive spot impact works in both directions and with protocol fee (2.6963ms)
+✔ vault blocks token-driven recursive claims and rejects transfer-tax funding atomically (1872.6895ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 62385.0087

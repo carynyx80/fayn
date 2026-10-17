@@ -1,0 +1,5 @@
+import {provider,contract,loadDeployment,json,onlyLocal} from '../shared/chain.mjs';
+await onlyLocal();const d=loadDeployment(),checks=[];
+try{const r=await fetch(new URL('/api/state',process.env.FAYN_URL||'http://127.0.0.1:4173'));const state=await r.json();checks.push({name:'service',ok:r.ok});checks.push({name:'indexLag',ok:state.status?.tip-state.status?.indexed<=2});checks.push({name:'indexFreshness',ok:Date.now()-Date.parse(state.status?.updatedAt)<60000});}catch(e){checks.push({name:'service',ok:false,error:e.message});}
+const vault=contract('RewardVault',d.vault);for(const token of d.tokens){const t=contract('DemoToken',token.address);const router=await t.balanceOf(d.router),balance=await t.balanceOf(d.vault),liabilities=await vault.liabilities(token.address);checks.push({name:`router residual ${token.symbol}`,ok:router===0n,amount:router});checks.push({name:`vault solvency ${token.symbol}`,ok:balance>=liabilities,balance,liabilities});}
+console.log(json({time:new Date().toISOString(),checks}));if(checks.some(c=>!c.ok))process.exitCode=1;

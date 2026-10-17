@@ -1,0 +1,18 @@
+✔ hosted mode seeds explicit simulated state and persists across adapter reload (224.5219ms)
+✔ browser fee units, boundary decay and token precision are explicit (1.4119ms)
+✔ approval, exact input/output in both directions and conservation of each asset (20.2703ms)
+✔ expired, stale and insufficient-balance quotes cannot execute (13.3284ms)
+✔ LP earnings are funded, collect once, and position ownership bounds removal (8.1958ms)
+✔ funded simulated rebate is paid once and unrelated pools have no grants (2.5248ms)
+✔ pool creation validates bounds, consumes liquidity and supports new-pool trades (8.8797ms)
+✔ reset restores an isolated demo; unsupported methods and bad storage fail clearly (2.9546ms)
+✔ Vercel build serves only static assets and explicitly selects browser simulation (11.396ms)
+✔ built hosted UI renders all routes, reviews a policy, quotes and executes a simulated swap (369.876ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1327.8342

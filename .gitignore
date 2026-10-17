@@ -1,0 +1,9 @@
+node_modules/
+artifacts/
+.env
+runtime/
+coverage/
+dist/
+.vercel/
+.env.*
+!.env.example

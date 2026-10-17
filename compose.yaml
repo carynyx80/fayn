@@ -1,0 +1,12 @@
+services:
+  fayn-local:
+    build: .
+    ports:
+      - "127.0.0.1:4173:4173"
+    environment:
+      BIND_ADDRESS: "0.0.0.0"
+      PORT: "4173"
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    # RPC stays inside the container. Chain and demo grants reset on restart.
