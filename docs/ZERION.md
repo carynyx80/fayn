@@ -1,1 +1,1 @@
-The previous Zerion deployment-only experiment is superseded by the public read-only WalletConnect flow. See PRELAUNCH.md. No deployment or signing is enabled.
+Obsolete deployment experiment. The current app uses direct browser-wallet account access; see WALLET-FIX.md.

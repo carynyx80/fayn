@@ -1,0 +1,13 @@
+export const ROBINHOOD={chainId:'0x1237',chainName:'Robinhood Chain',nativeCurrency:{name:'Ether',symbol:'ETH',decimals:18},rpcUrls:['https://rpc.mainnet.chain.robinhood.com'],blockExplorerUrls:['https://robinhoodchain.blockscout.com']};
+export function walletError(e){if(e?.code===4001)return 'Connection or network change declined. You can try again.';if(e?.code===-32002)return 'A request is already waiting in your wallet. Open your wallet and approve or dismiss it.';if([4200,-32601].includes(e?.code))return 'Select Robinhood Chain in your wallet, then connect again. This wallet cannot switch networks automatically.';return e?.message||'Wallet connection failed. Please try again.';}
+export async function connectMainnet(provider){
+ if(typeof provider?.request!=='function')throw Error('No compatible wallet was found in this browser.');
+ const accounts=await provider.request({method:'eth_requestAccounts'});if(!/^0x[0-9a-fA-F]{40}$/.test(accounts?.[0]||''))throw Error('Your wallet did not share an account. Unlock it and try again.');
+ let chain=await provider.request({method:'eth_chainId'});
+ if(BigInt(chain)!==4663n){try{await provider.request({method:'wallet_switchEthereumChain',params:[{chainId:ROBINHOOD.chainId}]});}catch(e){if(e?.code!==4902&&e?.data?.originalError?.code!==4902)throw e;await provider.request({method:'wallet_addEthereumChain',params:[ROBINHOOD]});await provider.request({method:'wallet_switchEthereumChain',params:[{chainId:ROBINHOOD.chainId}]});}}
+ const [current,verified]=await Promise.all([provider.request({method:'eth_accounts'}),provider.request({method:'eth_chainId'})]);
+ if(BigInt(verified)!==4663n)throw Error('Robinhood mainnet is not selected. Switch to Robinhood Chain in your wallet and try again.');
+ if(!/^0x[0-9a-fA-F]{40}$/.test(current?.[0]||''))throw Error('Wallet account access was removed. Connect again.');
+ return {account:current[0],chainId:4663};
+}
+export function discoverWallets(scope,onChange=()=>{}){const entries=[];const add=(provider,name='Browser wallet')=>{if(typeof provider?.request!=='function'||entries.some(e=>e.provider===provider))return;entries.push({provider,name:String(name).slice(0,80)});onChange(entries.slice());};const announced=e=>{if(e?.detail?.provider)add(e.detail.provider,e.detail.info?.name||'Browser wallet');};scope.addEventListener?.('eip6963:announceProvider',announced);const scan=()=>{scope.dispatchEvent?.(new Event('eip6963:requestProvider'));for(const p of scope.ethereum?.providers||[scope.ethereum])if(p)add(p,p.isRobinhood?'Robinhood Wallet':'Browser wallet');return entries.slice();};return {scan,stop:()=>scope.removeEventListener?.('eip6963:announceProvider',announced)};}

@@ -1,6 +1,6 @@
 # Current public release
 
-The hosted build is a read-only pre-launch preview with Robinhood Wallet connection. No trading or simulated activity is shipped. See [release status](docs/PRELAUNCH.md) for verification and deployment limitations. The local EVM research application remains available in source.
+The hosted build is a partnership site with direct browser-wallet connection to Robinhood Chain mainnet. No trading or simulated activity is shipped. See [release status](docs/PRELAUNCH.md) for verification and deployment limitations. The local EVM research application remains available in source.
 
 ---
 
