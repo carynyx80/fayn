@@ -1,4 +1,5 @@
 import http from 'node:http';
+import {robinhoodStatus} from './robinhood-status.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -80,12 +81,13 @@ async function action(url,b){
  }
  throw Error('Unknown action');
 }
-const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml'};
+const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.ttf':'font/ttf','.woff2':'font/woff2','.txt':'text/plain'};
 const server=http.createServer(async(req,res)=>{
  res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Cache-Control','no-store');res.setHeader('Content-Security-Policy',"default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'");
  try{
   const url=new URL(req.url,'http://localhost');
   if(!['127.0.0.1','localhost'].includes((req.headers.host||'').split(':')[0])){res.writeHead(403);return res.end('Local host only');}
+  if(req.method==='GET'&&url.pathname==='/api/robinhood'){res.setHeader('Content-Type','application/json');return res.end(json(await robinhoodStatus()));}
   if(req.method==='GET'&&url.pathname==='/api/state'){res.setHeader('Content-Type','application/json');return res.end(json(await state()));}
   if(req.method==='POST'&&url.pathname.startsWith('/api/')){
    if(req.headers.origin&&new URL(req.headers.origin).host!==req.headers.host)throw Error('Origin rejected');

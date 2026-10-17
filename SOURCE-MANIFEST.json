@@ -55,6 +55,11 @@
     "sha256": "6ad95ec96936814a5d9dc54d3a8f18a4cf4790e42e13e0a643a7d6c0c26dfb39"
   },
   {
+    "path": "api/robinhood.mjs",
+    "bytes": 856,
+    "sha256": "9cc446894f5a7c5a5abc2b5f2cdb4ce7bcd3731be0c0c19c840436a7dfd4eb92"
+  },
+  {
     "path": "contracts/AdversarialToken.sol",
     "bytes": 1091,
     "sha256": "cd84874f634ed9bb5ca1fd37f7472d394d3b262f38fd7b48e1426e0b1ed28dcf"
@@ -105,6 +110,11 @@
     "sha256": "6372d7fb9000019ed2b2b76c0af3945bccfd99fc2b090521e82a8bab4f519206"
   },
   {
+    "path": "docs/ROBINHOOD-LAUNCH.md",
+    "bytes": 2450,
+    "sha256": "fc7b2f66c27eb1dc6977f467258d747f07d7983cfdb5c664a8df40a0999cd419"
+  },
+  {
     "path": "docs/RUNBOOK.md",
     "bytes": 3727,
     "sha256": "cccbe38ed99d4e16fdd5b717a1bb85a7084fe331df2c582b54d62f0c59743da3"
@@ -151,8 +161,8 @@
   },
   {
     "path": "scripts/build.mjs",
-    "bytes": 760,
-    "sha256": "b27ab22d36b7f130423a012a21b1c73043bae4ae4413da2a9e1090d35034e40b"
+    "bytes": 824,
+    "sha256": "4f26d4ab563f8300d0db15a4481ae1065cd422a9921e95c8085cdca4a2bbb5a8"
   },
   {
     "path": "scripts/chain.mjs",
@@ -163,6 +173,11 @@
     "path": "scripts/check-local.mjs",
     "bytes": 2514,
     "sha256": "1793a775926ff6b19a0b978fac8f46cedd94b9e5f636c62baa6422d948f17c91"
+  },
+  {
+    "path": "scripts/check-robinhood.mjs",
+    "bytes": 2623,
+    "sha256": "8127c249e0fe0daf3452ef0c85090269f5c2f33f04f5d08f4d5ed9dd74c74a6c"
   },
   {
     "path": "scripts/check-syntax.mjs",
@@ -181,8 +196,13 @@
   },
   {
     "path": "scripts/github-manifest.mjs",
-    "bytes": 1558,
-    "sha256": "a08c25c7b4b736f9192f141ffe8690604d4a31d8dbe2675a0ce5b79464dfbdbc"
+    "bytes": 1874,
+    "sha256": "a0d666b2f4e57950f6c350aa6c43dd66748c3fb7c141612b8e1e0bcd0fdb704e"
+  },
+  {
+    "path": "scripts/prepare-robinhood.mjs",
+    "bytes": 4234,
+    "sha256": "79ad697931b811c6beb4960eb5cb9b908e3dab88662de2ccf6fcb76c6c067cea"
   },
   {
     "path": "scripts/prepare-testnet.mjs",
@@ -215,9 +235,14 @@
     "sha256": "07b9d33c0635db3543188801ca31f0fab3eaeab73729d0fdc38c25a27efda0de"
   },
   {
+    "path": "services/robinhood-status.mjs",
+    "bytes": 3483,
+    "sha256": "29b5601ae24c5920b884b5d29658868753eca62ec77ea8ff521e3f2981ea6f57"
+  },
+  {
     "path": "services/server.mjs",
-    "bytes": 10214,
-    "sha256": "3a96a09de4166e9d489c2a4ed8931fd027a3011d4c33b4b0b7df08eeafa8f89a"
+    "bytes": 10485,
+    "sha256": "b4718faf1574538e71205ef5e95ef361864b30006d2b50d972b7a0e58befccfa"
   },
   {
     "path": "shared/abis/DemoToken.json",
@@ -253,6 +278,11 @@
     "path": "shared/networks.json",
     "bytes": 494,
     "sha256": "45e9e4036ca5658402b3874bd7d8bb7eab6720b7343ab7662e52e3c8eb4bf556"
+  },
+  {
+    "path": "shared/robinhood.json",
+    "bytes": 979,
+    "sha256": "07efd585e528a1565dd933dcd1437f53cee6be39117f91977fffc8a1a116c12e"
   },
   {
     "path": "shared/state.mjs",
@@ -310,14 +340,24 @@
     "sha256": "f34cb079a8237986ab6bef927622d971da14f157b33ffa89cc202c236b9f6fa7"
   },
   {
+    "path": "tests/robinhood.test.mjs",
+    "bytes": 2637,
+    "sha256": "a41dbcbdfaf4330a49ed2b7b9ff6801470a83d0c7ee45d1ff627268fdc11f0c6"
+  },
+  {
     "path": "tests/vercel.test.mjs",
-    "bytes": 3784,
-    "sha256": "f67cb1978564b474a75443421a21d03f086b7af69c2f01c7963033cbd0a43742"
+    "bytes": 3800,
+    "sha256": "e52561200b9696a01b57c5d9f2d5fb8c554241a484440716baa4bba9e0cca6ac"
   },
   {
     "path": "web/app.js",
-    "bytes": 31085,
-    "sha256": "805999a0cae4d99cf7e3e479f636db866848cd0b07925ea9fb3a20b7fced4517"
+    "bytes": 32672,
+    "sha256": "cbe2b75c6768c0444e4999bb7a1c6cfb6d7e02c6540bc147fa0f2e9d02eb7974"
+  },
+  {
+    "path": "web/brand-mark.svg",
+    "bytes": 238,
+    "sha256": "f45f619f103e5226d19d422c2b17a775ab58bcbeb5021a396018d16be2060899"
   },
   {
     "path": "web/browser-demo.js",
@@ -326,13 +366,53 @@
   },
   {
     "path": "web/client-api.js",
-    "bytes": 286,
-    "sha256": "49361d1dfa04ae9f3ac14f536363c0d2072b5565f24bbc4c4fc0b176f61e7965"
+    "bytes": 351,
+    "sha256": "8768b3d91308adf783e243cbe207fbcca790d94c2190a88b71e85d3650cd7cb7"
+  },
+  {
+    "path": "web/fonts/BodoniModa-Italic.ttf",
+    "bytes": 176300,
+    "sha256": "dfff1619f8f6871c6372f8855b67211f9a73b4e93d45aca868cd8f46a48622de"
+  },
+  {
+    "path": "web/fonts/BodoniModa.ttf",
+    "bytes": 162104,
+    "sha256": "550f5e34ee0a828d7941b1fe9bc58b34e5260d3f33a61532e6d0a0114e79a5cf"
+  },
+  {
+    "path": "web/fonts/InstrumentSans.ttf",
+    "bytes": 194336,
+    "sha256": "b24f1812584816958afcf22e22d08e44318c5e51651e25d2438efdde389b33b1"
+  },
+  {
+    "path": "web/fonts/OFL-bodonimoda.txt",
+    "bytes": 4400,
+    "sha256": "931dfe2e0cd3c9443295f5c1d754b8a8403bf060df50c1d5900267ade83d0046"
+  },
+  {
+    "path": "web/fonts/OFL-instrumentsans.txt",
+    "bytes": 4403,
+    "sha256": "9e27a72ed30eb49a08678f6a5d6ed98ec7ba5368f541637ee0683ec9134ef966"
+  },
+  {
+    "path": "web/fonts/OFL-syne.txt",
+    "bytes": 4402,
+    "sha256": "cc43cdce6f91c57989af8459341c276655e34224e954fa69c2ad700831a742d8"
+  },
+  {
+    "path": "web/fonts/README.md",
+    "bytes": 714,
+    "sha256": "008c1638fc3b758e93cd8eb09e77357108c2451887f72dcbcac5f77fcd55d578"
+  },
+  {
+    "path": "web/fonts/Syne.ttf",
+    "bytes": 146980,
+    "sha256": "ce5ac77142a65cab2248a1a2ebb740b1d4d9c20b52488877d3ff664d1356104a"
   },
   {
     "path": "web/index.html",
-    "bytes": 653,
-    "sha256": "a0680eb904b154b3898dc06013ac138fdbc2f3774b39b4bbe84b03958c886e98"
+    "bytes": 798,
+    "sha256": "21fa7aef744c6c4e47cb028941d9c5f07838fe9dd40f84b6dc0e3ec7ff8eceeb"
   },
   {
     "path": "web/package.json",
@@ -346,7 +426,7 @@
   },
   {
     "path": "web/style.css",
-    "bytes": 9856,
-    "sha256": "d7c7b8fa2cc1895e6cbc17ac6613b8836b3ed6151385910a3beeeada97c8661d"
+    "bytes": 18198,
+    "sha256": "2b0cbf39484cca9af41e08c999e7224bdb0874c5da0f2716dd6965c6d8370147"
   }
 ]

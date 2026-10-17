@@ -1,0 +1,22 @@
+{
+  "name":"Robinhood Chain",
+  "chainId":4663,
+  "rpcUrl":"https://rpc.mainnet.chain.robinhood.com",
+  "explorer":"https://robinhoodchain.blockscout.com",
+  "nativeCurrency":{"name":"Ether","symbol":"ETH","decimals":18},
+  "poolManager":"0x8366a39cc670b4001a1121b8f6a443a643e40951",
+  "quoter":"0x8dc178efb8111bb0973dd9d722ebeff267c98f94",
+  "stateView":"0xf3334192d15450cdd385c8b70e03f9a6bd9e673b",
+  "assets":{
+    "WETH":{"address":"0x0bd7d308f8e1639fab988df18a8011f41eacad73","decimals":18},
+    "USDG":{"address":"0x5fc5360d0400a0fd4f2af552add042d716f1d168","decimals":6}
+  },
+  "operator":"0xf271a1f74a0c0773141f775ce1a368d3c18666c3",
+  "maxDeploymentUsd":"2.00",
+  "initialLiquidityBudget":"0",
+  "faynHook":null,
+  "faynRouter":null,
+  "faynVault":null,
+  "verifiedDocumentationDate":"2026-10-17",
+  "sources":["https://docs.robinhood.com/chain/connecting/","https://docs.robinhood.com/chain/contracts/","https://developers.uniswap.org/docs/protocols/v4/deployments"]
+}

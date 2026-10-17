@@ -1,0 +1,21 @@
+// Unsigned mainnet preparation only. No signer, key input or broadcast method.
+import fs from 'node:fs';
+import {JsonRpcProvider,ContractFactory,Interface,getCreateAddress,getCreate2Address,keccak256,zeroPadValue,toBeHex,formatEther} from 'ethers';
+import {artifact,json} from '../shared/chain.mjs';
+const cfg=JSON.parse(fs.readFileSync('shared/robinhood.json'));
+const rpc=new JsonRpcProvider(process.env.ROBINHOOD_RPC_URL||cfg.rpcUrl,undefined,{cacheTimeout:-1});
+if((await rpc.getNetwork()).chainId!==4663n)throw Error('Robinhood mainnet 4663 required');
+const managerCode=await rpc.getCode(cfg.poolManager);if(managerCode==='0x')throw Error('Official manager has no deployed code');
+const nonce=await rpc.getTransactionCount(cfg.operator,'pending'),balance=await rpc.getBalance(cfg.operator),fees=await rpc.getFeeData();
+const init=async(name,args=[])=>{const a=artifact(name);return (await new ContractFactory(a.abi,a.bytecode).getDeployTransaction(...args)).data;};
+const factory=getCreateAddress({from:cfg.operator,nonce});const hookInit=await init('FaynHook',[cfg.poolManager,cfg.operator]),initHash=keccak256(hookInit);let hook,salt;
+for(let i=0;i<2_000_000;i++){salt=zeroPadValue(toBeHex(i),32);hook=getCreate2Address(factory,salt,initHash);if((BigInt(hook)&16383n)===8320n)break;hook=null;}
+if(!hook)throw Error('Permission-bit mining exhausted');
+const router=getCreateAddress({from:cfg.operator,nonce:nonce+2}),vault=getCreateAddress({from:cfg.operator,nonce:nonce+3});
+const transactions=[{purpose:'Deploy CREATE2 factory',nonce,data:await init('Create2Factory')},{purpose:'Deploy immutable fee hook',nonce:nonce+1,to:factory,data:new Interface(artifact('Create2Factory').abi).encodeFunctionData('deploy',[salt,hookInit])},{purpose:'Deploy ERC20 settlement router',nonce:nonce+2,data:await init('FaynRouter',[cfg.poolManager,hook])},{purpose:'Deploy disabled reward vault',nonce:nonce+3,data:await init('RewardVault',[cfg.operator,false])}].map(t=>({...t,from:cfg.operator,chainId:4663,value:'0x0'}));
+// EVM code-deposit charge alone: deliberately excludes intrinsic, execution and L1 data gas.
+const minimumCodeDepositGas=['Create2Factory','FaynHook','FaynRouter','RewardVault'].reduce((sum,name)=>sum+BigInt((artifact(name).runtime.length-2)/2)*200n,0n);
+const gasPrice=fees.gasPrice;if(gasPrice==null)throw Error('RPC did not provide gas price');
+const lowerBoundWei=minimumCodeDepositGas*gasPrice;
+const plan={mode:'UNSIGNED / NOT DEPLOYED',preparedAt:new Date().toISOString(),chainId:4663,operator:cfg.operator,budgetUsd:cfg.maxDeploymentUsd,initialLiquidityBudget:'0',manager:cfg.poolManager,managerCodeHash:keccak256(managerCode),factory,hook,router,vault,salt,nativeBalanceWei:balance.toString(),nativeBalanceEth:formatEther(balance),currentGasPriceWei:gasPrice.toString(),minimumCodeDepositGas:minimumCodeDepositGas.toString(),codeDepositOnlyLowerBoundWei:lowerBoundWei.toString(),codeDepositOnlyLowerBoundEth:formatEther(lowerBoundWei),balanceBelowCodeDepositLowerBound:balance<lowerBoundWei,usdBudgetVerified:false,broadcastReady:false,transactions,requiredBeforeSigning:['Review the unaudited contracts and complete independent security/integration review.','Obtain full sequential L2 gas estimates including L1 data charges; the code-deposit bound is not a full estimate.','Use a fresh trustworthy ETH/USD quote to evaluate the $2 cap; no USD estimate is invented.','Have the approved wallet securely sign each reviewed transaction.','Recompute predicted addresses if the pending nonce changes.','With no initial liquidity, stop at infrastructure: no pool or executable trading launch is claimed.','Configure canonical assets and initialize a funded pool only after separate liquidity funding and price review.'],verification:[{name:'Create2Factory',address:factory,args:[]},{name:'FaynHook',address:hook,args:[cfg.poolManager,cfg.operator]},{name:'FaynRouter',address:router,args:[cfg.poolManager,hook]},{name:'RewardVault',address:vault,args:[cfg.operator,false]}]};
+fs.mkdirSync('runtime',{recursive:true});fs.writeFileSync('runtime/robinhood-unsigned.json',json(plan));console.log(json({...plan,transactions:plan.transactions.map(({data,...t})=>({...t,dataBytes:(data.length-2)/2}))}));rpc.destroy();

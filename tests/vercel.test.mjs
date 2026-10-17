@@ -5,7 +5,7 @@ test('Vercel build serves only static assets and explicitly selects browser simu
  for(const file of ['index.html','app.js','style.css','client-api.js','browser-demo.js','runtime-config.js'])assert(fs.existsSync('dist/'+file));
  assert(fs.readFileSync('dist/runtime-config.js','utf8').includes("mode:'browser-demo'"));
  assert(fs.readFileSync('web/runtime-config.js','utf8').includes("mode:'local-evm'"));
- for(const file of fs.readdirSync('dist'))assert(/\.(html|js|css|svg|txt)$/.test(file));assert(!fs.existsSync('dist/api'));assert(!fs.existsSync('dist/.env'));assert(!fs.existsSync('dist/runtime'));
+ for(const file of fs.readdirSync('dist'))assert(file==='fonts'||/\.(html|js|css|svg|txt)$/.test(file));assert(!fs.existsSync('dist/api'));assert(!fs.existsSync('dist/.env'));assert(!fs.existsSync('dist/runtime'));
  assert(cfg.headers[0].headers.some(h=>h.key==='Content-Security-Policy'));
 });
 test('built hosted UI renders all routes, reviews a policy, quotes and executes a simulated swap',async()=>{
