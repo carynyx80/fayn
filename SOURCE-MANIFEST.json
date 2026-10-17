@@ -171,8 +171,8 @@
   },
   {
     "path": "docs/WALLET-FIX.md",
-    "bytes": 2021,
-    "sha256": "1e21ade50a5fac8773786d7136ac7a74f198ac598f166413687e83e7f86d7b07"
+    "bytes": 2607,
+    "sha256": "15ccd7092cd7a461e69caf9d0426ffe0be80f55f3970e13bfc7b55b38a0b091a"
   },
   {
     "path": "docs/ZERION.md",
@@ -246,8 +246,8 @@
   },
   {
     "path": "scripts/wallet-entry.mjs",
-    "bytes": 3090,
-    "sha256": "ebe08dabd8f4ce331173128712a766398a12ac7ad31706924ed0eb9e846f2d8c"
+    "bytes": 5194,
+    "sha256": "77692bec173a564cd8a83feb95d8baeb6bc7d0acbbe19c385b1f809709477450"
   },
   {
     "path": "services/indexer.mjs",
@@ -376,8 +376,8 @@
   },
   {
     "path": "tests/wallet.test.mjs",
-    "bytes": 4818,
-    "sha256": "fe179c95f757bc5170f45ca0c9332c953ad2201e38372d555cb290316a01f71a"
+    "bytes": 7112,
+    "sha256": "07c2e4ecc389d2353cd7593fb26e06c36ed5b05df220a0a46cdc50aa21c5f477"
   },
   {
     "path": "web/app.js",
