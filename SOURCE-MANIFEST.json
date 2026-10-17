@@ -1,23 +1,23 @@
 [
   {
     "path": "package.json",
-    "bytes": 1108,
-    "sha256": "5bdd3ec338ee84e469550476e1b65ee4252627489a6d936336d5e39437915c7d"
+    "bytes": 1306,
+    "sha256": "d7027d7e3a3bb67c3cec394ad9465f38a16239e445fc9180d9d9028539b22514"
   },
   {
     "path": "package-lock.json",
-    "bytes": 110270,
-    "sha256": "36df4e2c19d23944a968e314f57b6e67706c564e1f808f969790954cd591e689"
+    "bytes": 284367,
+    "sha256": "e01e3a0090b191fe43552fd4c9c838d15081d79f1e6ee2029953d41acef5be60"
   },
   {
     "path": "vercel.json",
-    "bytes": 591,
-    "sha256": "fb698cd423321319ab62c614e71b04d15c4a0787c1632f4581d1888713fc5adc"
+    "bytes": 1077,
+    "sha256": "b503950e12df20ebb72327148cd3c1d3b0dd1f0dc8d5a1f255ad57415e7ee15e"
   },
   {
     "path": "README.md",
-    "bytes": 7346,
-    "sha256": "1bc5d411c014dca4ca8779f5701eb8ca2423f7e28d88e5a7767d35ef7b3d4815"
+    "bytes": 7657,
+    "sha256": "2df81b4920a1d1e9fce7b1046780f288275440384ac3bdb7023353e794a9ccb4"
   },
   {
     "path": "hardhat.config.cjs",
@@ -115,6 +115,11 @@
     "sha256": "6372d7fb9000019ed2b2b76c0af3945bccfd99fc2b090521e82a8bab4f519206"
   },
   {
+    "path": "docs/PRELAUNCH.md",
+    "bytes": 1770,
+    "sha256": "4937920960c4d3781f3796b6792ad93f5d165104e677e6eaf685f6deb08eaac7"
+  },
+  {
     "path": "docs/ROBINHOOD-LAUNCH.md",
     "bytes": 2450,
     "sha256": "fc7b2f66c27eb1dc6977f467258d747f07d7983cfdb5c664a8df40a0999cd419"
@@ -165,9 +170,14 @@
     "sha256": "372faf31d775dedc2eba39697b26d2015ff844a14b0450b921946ba0261a6537"
   },
   {
+    "path": "docs/ZERION.md",
+    "bytes": 161,
+    "sha256": "73e02712ac2e644b423ae24127e81e86d9b213c4162006f125db109814afd7fb"
+  },
+  {
     "path": "scripts/build.mjs",
-    "bytes": 824,
-    "sha256": "4f26d4ab563f8300d0db15a4481ae1065cd422a9921e95c8085cdca4a2bbb5a8"
+    "bytes": 1110,
+    "sha256": "9e4848e88eb2b8a1f5c510fd5c78c98feb409c94a6cebfdebc3701da0e52516a"
   },
   {
     "path": "scripts/chain.mjs",
@@ -188,6 +198,11 @@
     "path": "scripts/check-syntax.mjs",
     "bytes": 459,
     "sha256": "a95a8d4d9980e3da07083acbf28989dc4723fa21b4f8ef2f5bb03433e5d9f371"
+  },
+  {
+    "path": "scripts/check-wallet-relay.mjs",
+    "bytes": 697,
+    "sha256": "118b44843123dc85689899edd25ce4e41a072da0033e8bdbdb4aacb6758376c1"
   },
   {
     "path": "scripts/compile.mjs",
@@ -215,6 +230,11 @@
     "sha256": "bd0d401e56afb987fcad9ef9c4d355368ff84e5d6f6d592b2fd93b8bbe4f48a5"
   },
   {
+    "path": "scripts/sandbox-bundle.mjs",
+    "bytes": 3483,
+    "sha256": "e84ce8b83a5b6b30fd60aed3af85d8aabd5645726dd8404e2bdf5eec0fae25f5"
+  },
+  {
     "path": "scripts/seed.mjs",
     "bytes": 2734,
     "sha256": "1ee9c3bd249f19fb51e70cd223b402c28e54c8a73a70870b4bc74f8d6c9bf5f3"
@@ -228,6 +248,11 @@
     "path": "scripts/verify-contract.mjs",
     "bytes": 2079,
     "sha256": "ea4ce1caef4ee260aa75364176ddfe54c355526f9acb58759e2b96d8a409e2df"
+  },
+  {
+    "path": "scripts/wallet-entry.mjs",
+    "bytes": 3129,
+    "sha256": "0aef409b6255b333d0cf0ec5c2d673171232f25dd44a1a35bda64460856a6f34"
   },
   {
     "path": "services/indexer.mjs",
@@ -351,18 +376,23 @@
   },
   {
     "path": "tests/vercel.test.mjs",
-    "bytes": 5573,
-    "sha256": "957693aba58a7b17123b165c420a96918eb843a7e79141f694e839a4950066e3"
+    "bytes": 1188,
+    "sha256": "d2bbb3271b084af74c22a26e69c730d3a124044ff86477062a71780ca7941a35"
+  },
+  {
+    "path": "tests/wallet.test.mjs",
+    "bytes": 2126,
+    "sha256": "61216a9a39569413ba56a6b06009a635d13f113e8236e1b0c491a17e9d97d560"
   },
   {
     "path": "web/app.js",
-    "bytes": 36902,
-    "sha256": "8ff7611409bd19c5cf38f39dc638bdbfd4ccffc3c656e8aa711fc6802ead6a0a"
+    "bytes": 39655,
+    "sha256": "1c2e7cc98d9d3ee1c500f3fd6902ab4b163aba107ef5925d2a89f3696bba6c2e"
   },
   {
     "path": "web/brand-mark.svg",
     "bytes": 238,
-    "sha256": "f45f619f103e5226d19d422c2b17a775ab58bcbeb5021a396018d16be2060899"
+    "sha256": "172d9af8bd2e81a4d3946b3a9bd1a99ee8d00c3dbc79ceb2fdca54784343830c"
   },
   {
     "path": "web/browser-demo.js",
@@ -416,8 +446,8 @@
   },
   {
     "path": "web/index.html",
-    "bytes": 798,
-    "sha256": "21fa7aef744c6c4e47cb028941d9c5f07838fe9dd40f84b6dc0e3ec7ff8eceeb"
+    "bytes": 6173,
+    "sha256": "d7bca595bf1013ec98321d4b7948d25f6ba35848335a177a7569cbb888697560"
   },
   {
     "path": "web/package.json",
@@ -431,7 +461,7 @@
   },
   {
     "path": "web/style.css",
-    "bytes": 18198,
-    "sha256": "2b0cbf39484cca9af41e08c999e7224bdb0874c5da0f2716dd6965c6d8370147"
+    "bytes": 20601,
+    "sha256": "7806e72afe2cc83deedb4f0947d1db42d91290ef00b0a6aff32f59014e562031"
   }
 ]

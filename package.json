@@ -14,13 +14,17 @@
     "verify": "npm run compile && npm test && npm run simulate",
     "check:local": "node scripts/check-local.mjs",
     "build": "node scripts/build.mjs",
-    "test:hosted": "node --test --test-concurrency=1 tests/browser-demo.test.mjs tests/vercel.test.mjs",
+    "test:hosted": "node --test --test-concurrency=1 tests/wallet.test.mjs tests/vercel.test.mjs tests/robinhood.test.mjs",
     "check:syntax": "node scripts/check-syntax.mjs"
   },
   "dependencies": {
-    "@uniswap/v4-core": "1.0.2",
     "@openzeppelin/contracts": "5.4.0",
+    "@uniswap/v4-core": "1.0.2",
+    "@walletconnect/ethereum-provider": "2.26.0",
+    "@walletconnect/sign-client": "2.26.0",
+    "esbuild": "0.25.12",
     "ethers": "6.15.0",
+    "qrcode": "1.5.4",
     "solc": "0.8.26"
   },
   "devDependencies": {

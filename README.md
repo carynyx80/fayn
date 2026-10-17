@@ -1,3 +1,9 @@
+# Current public release
+
+The hosted build is a read-only pre-launch preview with Robinhood Wallet connection. No trading or simulated activity is shipped. See [release status](docs/PRELAUNCH.md) for verification and deployment limitations. The local EVM research application remains available in source.
+
+---
+
 # Fayn — Liquidity that bites back.
 
 A working **local Uniswap v4 integration laboratory** with immutable launch-fee policies, actual EVM swaps and LP accounting, separately funded reward claims, persistent event indexing, and a charcoal/ivory/lime web application. No governance token. No live deployment or independent audit.

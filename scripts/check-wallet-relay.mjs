@@ -1,0 +1,3 @@
+import {SignClient} from '@walletconnect/sign-client';
+const timer=setTimeout(()=>{console.log('Relay check timed out');process.exit(2);},25000);
+try{const client=await SignClient.init({projectId:'852aa00e0ce52fa9af76eb7669a2735f',relayUrl:'wss://relay.walletconnect.org',metadata:{name:'Fayn',description:'Read-only preview',url:'http://127.0.0.1:4173',icons:[]}});const pairing=await client.connect({requiredNamespaces:{eip155:{chains:['eip155:4663'],methods:['eth_accounts'],events:['accountsChanged','chainChanged']}}});console.log(JSON.stringify({pairingUriGenerated:!!pairing.uri}));clearTimeout(timer);process.exit(0);}catch(e){console.log(e.message);clearTimeout(timer);process.exit(1);}
