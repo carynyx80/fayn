@@ -95,6 +95,11 @@
     "sha256": "f88ff8e4b5dd9150b68a503d25758888ef8821205ae7af92feb94185b55ed175"
   },
   {
+    "path": "docs/ACTIVITY.md",
+    "bytes": 1361,
+    "sha256": "f942f5abc2e5f155b4932cf33d09d48ce440bcc12ed59dff8abad894a61985e4"
+  },
+  {
     "path": "docs/ARCHITECTURE.md",
     "bytes": 6944,
     "sha256": "58b5010ca0a9a52de43a58ebbf487f5f5977b7c88b0e0bfbfd951f57fd21e62e"
@@ -346,13 +351,13 @@
   },
   {
     "path": "tests/vercel.test.mjs",
-    "bytes": 3800,
-    "sha256": "e52561200b9696a01b57c5d9f2d5fb8c554241a484440716baa4bba9e0cca6ac"
+    "bytes": 5573,
+    "sha256": "957693aba58a7b17123b165c420a96918eb843a7e79141f694e839a4950066e3"
   },
   {
     "path": "web/app.js",
-    "bytes": 32672,
-    "sha256": "cbe2b75c6768c0444e4999bb7a1c6cfb6d7e02c6540bc147fa0f2e9d02eb7974"
+    "bytes": 36902,
+    "sha256": "8ff7611409bd19c5cf38f39dc638bdbfd4ccffc3c656e8aa711fc6802ead6a0a"
   },
   {
     "path": "web/brand-mark.svg",
